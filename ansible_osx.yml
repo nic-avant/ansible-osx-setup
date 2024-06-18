@@ -87,8 +87,7 @@
 
     - name: "Install my homebrew packages"
       community.general.homebrew:
-        name:
-          [
+        name: [
             "amethyst",
             "argocd",
             "background-music",
@@ -124,7 +123,8 @@
             "watch",
             "wget",
             "zsh-autosuggestions",
-            "spacelift-io/spacelift/spacectl",
+            # idk why this failed
+            # "spacelift-io/spacelift/spacectl",
           ]
         state: present
         update_homebrew: false
