@@ -1,9 +1,10 @@
 ---
 - hosts: localhost
   tasks:
-    - name: Install homebrew
-      include_role:
-        name: geerlingguy.mac.homebrew
+    # started failing when changing permissions on something
+    # - name: Install homebrew
+    #   include_role:
+    #     name: geerlingguy.mac.homebrew
 
     - name: Make sure homebrew bin is in path
       ansible.builtin.lineinfile:
@@ -55,7 +56,7 @@
             "fzf",
             "gnu-time",
             "gpg",
-            "heroku",
+            # "heroku",
             "htop",
             "imagemagick@6",
             "kubectx",
