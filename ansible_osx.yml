@@ -162,6 +162,11 @@
       shell: chsh -s $(which zsh) {{ lookup('env', 'USER') }}
       become: true
 
+    - name: Check if Starship is installed
+      shell: which starship
+      register: starship_installed
+      ignore_errors: true
+
     - name: Install Starship
       get_url:
         url: https://starship.rs/install.sh
