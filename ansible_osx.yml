@@ -196,29 +196,39 @@
       when: not pyenv_installed.stat.exists
 
     # Add something which ensures path is set here
-    # - name: Install VSCode extensions
-    #   shell: code --install-extension {{ item }}
-    #   with_items:
-    #     - apollographql.vscode-apollo
-    #     - bradlc.vscode-tailwindcss
-    #     - castwide.solargraph
-    #     - clinyong.vscode-css-modules
-    #     - eamodio.gitlens
-    #     - jakebecker.elixir-ls
-    #     - kaiwood.endwise
-    #     - karunamurti.haml
-    #     - ms-vscode-remote.vscode-remote-extensionpack
-    #     - ms-vscode.vscode-typescript-tslint-plugin
-    #     - msjsdiag.debugger-for-chrome
-    #     - rebornix.ruby
-    #     - richie5um2.vscode-sort-json
-    #     - Tyriar.sort-lines
-    #     - vscodevim.vim
-    #     - wholroyd.jinja
-    #     - wingrunr21.vscode-ruby
-    #     - xabikos.javascriptsnippets
-    #     - streetsidesoftware.code-spell-checker
-    #     - fabiospampinato.vscode-todo-plus
+    - name: Install VSCode extensions
+      shell: code --install-extension {{ item }}
+      with_items:
+        - vscode-icons-team.vscode-icons
+        - tamasfe.even-better-toml
+        - mhutchie.git-graph
+        - alefragnani.project-manager
+        - ms-python.python
+        - charliermarsh.ruff
+        - Gruntfuggly.todo-tree
+        - redhat.vscode-yaml
+        - ms-azure-devops.azure-pipelines
+        - christian-kohler.path-intellisense
+        - ms-azuretools.vscode-docker
+        - Codeium.codeium
+        - GitHub.copilot
+        - GitHub.copilot-chat
+        - eamodio.gitlens
+        - ms-vscode-remote.vscode-remote-extensionpack
+        - ms-vscode.vscode-typescript-tslint-plugin
+        - richie5um2.vscode-sort-json
+        - Tyriar.sort-lines
+        - vscodevim.vim
+        - wholroyd.jinja
+        - streetsidesoftware.code-spell-checker
+        - fabiospampinato.vscode-todo-plus
+        - ms-azuretools.vscode-docker
+        - github.vscode-github-actions
+        - GitHub.vscode-pull-request-github
+        - skellock.just
+        - ms-kubernetes-tools.vscode-kubernetes-tools
+        - erd0s.terraform-autocomplete
+        - dorzey.vscode-sqlfluff
 
     # - git:
     #     repo: https://github.com/asdf-vm/asdf.git
