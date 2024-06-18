@@ -15,12 +15,11 @@
 
     - name: "add custom homebrew repos"
       community.general.homebrew_tap:
-        name:
-          [
+        name: [
             adoptopenjdk/openjdk,
             fishtown-analytics/dbt,
             heroku/brew,
-            homebrew/cask-versions,
+            # homebrew/cask-versions,  # deprecated
             thoughtbot/formulae,
             weaveworks/tap,
           ]
