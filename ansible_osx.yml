@@ -177,17 +177,18 @@
       shell: sh /tmp/install_starship.sh -y -b $HOME/.local/bin
       when: starship_installed.rc != 0
 
-    - name: Install pipx
-      pip:
-        name: pipx
-        state: present
-        executable: pip3
+    #TODO: used system python to install pipx to install ansible...
+    # - name: Install pipx
+    #   pip:
+    #     name: pipx
+    #     state: present
+    #     executable: pip3
 
     - name: Install yamlfmt with pipx
-      shell: $HOME/.local/bin/pipx install yamlfmt
+      shell: pipx install yamlfmt
 
     - name: Install hatch with pipx
-      shell: $HOME/.local/bin/pipx install hatch
+      shell: pipx install hatch
 
     - name: Check if pyenv is installed
       stat:
