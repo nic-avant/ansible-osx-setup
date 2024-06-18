@@ -130,10 +130,11 @@
         state: present
         update_homebrew: false
 
-    - name: "Install from Mac app store"
-      shell: mas install {{ item }}
-      with_items:
-        - 497799835 # xcode
+    # will just use avant self service...
+    # - name: "Install from Mac app store"
+    #   shell: mas install {{ item }}
+    #   with_items:
+    #     - 497799835 # xcode
 
     - name: Make local bin
       ansible.builtin.file:
