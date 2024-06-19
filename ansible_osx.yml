@@ -311,3 +311,11 @@
     #   shell: asdf reshim nodejs
     - name: Install just
       shell: curl -sL https://just.systems/install.sh | bash -s -- --to $HOME/.local/bin
+
+    - name: Get k9s skins
+      shell: |
+        #!/bin/bash
+        echo "Getting k9s skins..."
+        OUT="${K9S_CONFIG_DIR:-$HOME/.config}/k9s/skins"
+        mkdir -p "$OUT"
+        curl -L https://github.com/catppuccin/k9s/archive/main.tar.gz | tar xz -C "$OUT" --strip-components=2 k9s-main/dist
